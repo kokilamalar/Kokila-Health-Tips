@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokila's Health Tips for Various Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .condition-select {
+            margin-bottom: 20px;
+        }
+        .tips {
+            display: none;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #e7f3ff;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kokila's Health Tips for Various Conditions</h1>
+        <div class="condition-select">
+            <label for="condition">Select Condition:</label>
+            <select id="condition">
+                <option value="stomach-pain">Stomach Pain</option>
+                <option value="headache">Headache</option>
+                <option value="hairloss">Hair Loss</option>
+                <option value="weightloss">Weight Loss</option>
+                <option value="proper-diet">Proper Diet</option>
+                <option value="weightgain">Weight Gain</option>
+                <option value="glowing-skin">Glowing Skin</option>
+            </select>
+        </div>
+        <div id="tips-stomach-pain" class="tips">
+            <h2>Tips for Stomach Pain</h2>
+            <ul>
+                <li>Drink plenty of water.</li>
+                <li>Avoid spicy and oily foods.</li>
+                <li>Consume ginger or peppermint tea.</li>
+                <li>Eat smaller, more frequent meals.</li>
+                <li>Rest and avoid stress.</li>
+            </ul>
+        </div>
+        <div id="tips-headache" class="tips">
+            <h2>Tips for Headache</h2>
+            <ul>
+                <li>Stay hydrated.</li>
+                <li>Avoid loud noises and bright lights.</li>
+                <li>Practice relaxation techniques.</li>
+                <li>Take over-the-counter pain relievers if needed.</li>
+                <li>Get adequate sleep.</li>
+            </ul>
+        </div>
+        <div id="tips-hairloss" class="tips">
+            <h2>Tips for Hair Loss</h2>
+            <ul>
+                <li>Eat a balanced diet rich in vitamins and minerals.</li>
+                <li>Avoid excessive heat styling.</li>
+                <li>Use gentle hair care products.</li>
+                <li>Massage your scalp regularly.</li>
+                <li>Consider supplements like biotin or zinc.</li>
+            </ul>
+        </div>
+        <div id="tips-weightloss" class="tips">
+            <h2>Tips for Weight Loss</h2>
+            <ul>
+                <li>Maintain a calorie deficit.</li>
+                <li>Engage in regular physical activity.</li>
+                <li>Eat a high-protein, low-carb diet.</li>
+                <li>Avoid sugary drinks and snacks.</li>
+                <li>Stay consistent and patient.</li>
+            </ul>
+        </div>
+        <div id="tips-proper-diet" class="tips">
+            <h2>Tips for a Proper Diet</h2>
+            <ul>
+                <li>Include a variety of fruits and vegetables.</li>
+                <li>Choose whole grains over refined grains.</li>
+                <li>Consume lean proteins.</li>
+                <li>Limit added sugars and saturated fats.</li>
+                <li>Stay hydrated.</li>
+            </ul>
+        </div>
+        <div id="tips-weightgain" class="tips">
+            <h2>Tips for Weight Gain</h2>
+            <ul>
+                <li>Eat more calories than you burn.</li>
+                <li>Include protein-rich foods in your diet.</li>
+                <li>Consume healthy fats.</li>
+                <li>Eat more frequently throughout the day.</li>
+                <li>Engage in strength training exercises.</li>
+            </ul>
+        </div>
+        <div id="tips-glowing-skin" class="tips">
+            <h2>Tips for Glowing Skin</h2>
+            <ul>
+                <li>Stay hydrated.</li>
+                <li>Eat a balanced diet rich in fruits and vegetables.</li>
+                <li>Use sunscreen daily.</li>
+                <li>Follow a regular skincare routine.</li>
+                <li>Get enough sleep and manage stress.</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById('condition').addEventListener('change', function() {
+            var tips = document.querySelectorAll('.tips');
+            tips.forEach(function(tip) {
+                tip.style.display = 'none';
+            });
+            var selectedCondition = this.value;
+            document.getElementById('tips-' + selectedCondition).style.display = 'block';
+        });
+
+        // Default to Stomach Pain
+        document.getElementById('tips-stomach-pain').style.display = 'block';
+    </script>
+</body>
+</html>
